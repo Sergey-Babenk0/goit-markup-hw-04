@@ -522,7 +522,7 @@ footer .container {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--light-background-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-adds .fill-link {
@@ -541,13 +541,12 @@ footer .container {
 .footer-adds .fill-link .icon {
   fill: #afb1b8;
   margin-right: 0;
-  cursor: pointer;
 }
 
-.footer-adds .fill-link:hover,
-.footer-adds .fill-link:focus,
-.footer-adds .fill .icon:hover,
-.footer-adds .fill .icon:focus {
+/* .footer-adds .fill-link:hover,
+.footer-adds .fill-link:focus, */
+.footer-adds .fill:hover,
+.footer-adds .fill:focus {
   fill: var(--light-background-color);
   background-color: var(--brand-color-one);
 }
