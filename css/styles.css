@@ -146,10 +146,15 @@ body {
   fill: var(--brand-color-one);
 }
 
+.active {
+  color: var(--brand-color-one);
+}
+
 /* Оформление секции "Герой" */
 .hero {
   max-width: 1600px;
   min-height: 600px;
+  margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -191,6 +196,7 @@ body {
   display: block;
   min-width: 200px;
   height: 50px;
+  border: 0;
   border-radius: 4px;
   cursor: pointer;
   font-family: 'Roboto';
@@ -198,6 +204,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
+  letter-spacing: 0.06em;
   color: #ffffff;
   background-color: #2196f3;
 }
@@ -383,11 +390,14 @@ li .fill {
   fill: #afb1b8;
 }
 
-.fill-link:hover,
-.fill-link:focus,
-.fill .icon:hover,
-.fill .icon:focus {
+.fill-link:hover svg,
+.fill-link:focus svg {
   fill: var(--light-background-color);
+  background-color: var(--brand-color-one);
+}
+
+.fill-link:hover,
+.fill-link:focus {
   background-color: var(--brand-color-one);
 }
 /* Секция клиентов */
@@ -407,8 +417,6 @@ li .fill {
 .clients-list {
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
   margin-right: 30px;
 }
 
@@ -418,6 +426,8 @@ li .fill {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
   color: #afb1b8;
 }
 
@@ -428,7 +438,7 @@ li .fill {
 .clients-link:hover,
 .clients-list:focus {
   color: var(--brand-color-one);
-  border: 1px solid var(--brand-color-one);
+  border-color: var(--brand-color-one);
 }
 .links .clients-list:hover,
 .links .clients-list:focus {
@@ -471,6 +481,9 @@ li .fill {
   margin-top: 9px;
 }
 /* Оформление цвета ссылок */
+.footer .fill .icon {
+  fill: #ffffff;
+}
 .footer-links {
   margin-top: 9px;
   font-style: normal;
@@ -496,10 +509,11 @@ li .fill {
 
 footer .container {
   display: flex;
+  align-items: baseline;
 }
 .footer-adds {
   margin-left: 70px;
-  padding-top: 12px;
+  /* padding-top: 12px; */
 }
 
 .footer-adds .links {
@@ -525,7 +539,7 @@ footer .container {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-adds .fill-link {
+.footer-adds > .fill-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,20 +548,28 @@ footer .container {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  cursor: pointer;
-  fill: #afb1b8;
+  fill: #ffffff;
 }
 
-.footer-adds .fill-link .icon {
-  fill: #afb1b8;
+.footer-adds .fill-link > .icon {
+  fill: #ffffff;
   margin-right: 0;
+}
+
+.fill-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .fill {
+  cursor: pointer;
 }
 
 /* .footer-adds .fill-link:hover,
 .footer-adds .fill-link:focus, */
 .footer-adds .fill:hover,
 .footer-adds .fill:focus {
-  fill: var(--light-background-color);
   background-color: var(--brand-color-one);
 }
 
