@@ -330,7 +330,7 @@ body {
 }
 
 .team-profession {
-  padding-top: 10px;
+  margin-top: 10px;
   font-style: normal;
   font-size: 16px;
   line-height: 1.19;
@@ -341,15 +341,14 @@ body {
 .empl {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-bottom: 30px;
+  align-items: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .empl-name {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 30px;
 }
 
 .works-text {
@@ -359,6 +358,7 @@ body {
 
 .empl .links {
   margin-left: 0;
+  margin-top: 16px;
 }
 
 li .fill {
@@ -431,17 +431,21 @@ li .fill {
   color: #afb1b8;
 }
 
+.links > .clients-list {
+  margin-right: 30px;
+}
+
 .clients-link > .icon {
   fill: currentColor;
 }
 
 .clients-link:hover,
-.clients-list:focus {
+.clients-link:focus {
   color: var(--brand-color-one);
   border-color: var(--brand-color-one);
 }
-.links .clients-list:hover,
-.links .clients-list:focus {
+.links .clients-link:hover,
+.links .clients-link:focus {
   fill: var(--brand-color-one);
 }
 /* Адресы в футере */
@@ -528,7 +532,7 @@ footer .container {
   margin-right: 0;
 }
 
-.footer-adds .fill {
+footer .fill {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,9 +541,19 @@ footer .container {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
-.footer-adds > .fill-link {
+footer .fill-link {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* a .fill-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -549,29 +563,25 @@ footer .container {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   fill: #ffffff;
-}
+} */
 
-.footer-adds .fill-link > .icon {
+footer .fill-link > .icon {
   fill: #ffffff;
   margin-right: 0;
 }
 
-.fill-link {
+/* .fill-link {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-footer .fill {
-  cursor: pointer;
-}
+} */
 
 /* .footer-adds .fill-link:hover,
 .footer-adds .fill-link:focus, */
-.footer-adds .fill:hover,
+/* .footer-adds .fill:hover,
 .footer-adds .fill:focus {
   background-color: var(--brand-color-one);
-}
+} */
 
 /* ПОРТФОЛИО */
 /* Кнопки выбора типа портфолио */
